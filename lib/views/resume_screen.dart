@@ -92,7 +92,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2),
         Text(
-          'MeenaClick (Gemcon Group)',
+          'MeenaClick (Gemcon Food and Agricultural Products Ltd)',
           textAlign: TextAlign.start,
           textScaleFactor: 1.2,
           style: TextStyle(
