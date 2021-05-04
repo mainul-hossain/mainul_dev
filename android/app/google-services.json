@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "68320151825",
+    "firebase_url": "https://mainul-dev.firebaseio.com",
+    "project_id": "mainul-dev",
+    "storage_bucket": "mainul-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68320151825:android:a2d86ae79ef1831a44a4b0",
+        "android_client_info": {
+          "package_name": "dev.mainul.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68320151825-05dfh5luslmd9kbgbds5hhn05verp070.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGeedu3TeReI0rCVNAL3ibomp1juksc04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68320151825-05dfh5luslmd9kbgbds5hhn05verp070.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

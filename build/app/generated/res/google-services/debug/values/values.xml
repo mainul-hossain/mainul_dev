@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">68320151825-05dfh5luslmd9kbgbds5hhn05verp070.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://mainul-dev.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">68320151825</string>
+    <string name="google_api_key" translatable="false">AIzaSyBGeedu3TeReI0rCVNAL3ibomp1juksc04</string>
+    <string name="google_app_id" translatable="false">1:68320151825:android:a2d86ae79ef1831a44a4b0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBGeedu3TeReI0rCVNAL3ibomp1juksc04</string>
+    <string name="google_storage_bucket" translatable="false">mainul-dev.appspot.com</string>
+    <string name="project_id" translatable="false">mainul-dev</string>
+</resources>

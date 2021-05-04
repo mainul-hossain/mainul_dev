@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.0.0@aar">
+    <CLASSES>
+      <root url="file://D:/FlutterApps/meenaclick/android/.gradle/caches/transforms-2/files-2.1/79f9d65ef8b1c716310f666473a689a7/lifecycle-livedata-core-2.0.0/res" />
+      <root url="file://D:/FlutterApps/meenaclick/android/.gradle/caches/transforms-2/files-2.1/5483f8625c2214ac85eb45fc58c4b3ee/lifecycle-livedata-core-2.0.0/res" />
+      <root url="file://D:/FlutterApps/meenaclick/android/.gradle/caches/transforms-2/files-2.1/d5c8717084f59db6c9e1a9af1f0e8e15/lifecycle-livedata-core-2.0.0/res" />
+      <root url="jar://D:/FlutterApps/meenaclick/android/.gradle/caches/transforms-2/files-2.1/d5c8717084f59db6c9e1a9af1f0e8e15/lifecycle-livedata-core-2.0.0/jars/classes.jar!/" />
+      <root url="file://D:/FlutterApps/meenaclick/android/.gradle/caches/transforms-2/files-2.1/d5c8717084f59db6c9e1a9af1f0e8e15/lifecycle-livedata-core-2.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/FlutterApps/meenaclick/android/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.0.0/c158207594782b42f3a2e08a5a029eb3319e4404/lifecycle-livedata-core-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
