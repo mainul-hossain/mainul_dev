@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'package:flutter/rendering.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
 
@@ -9,9 +8,9 @@ class AppLinkWidget extends StatelessWidget {
   final String appLink;
 
   const AppLinkWidget({
-    Key key,
-    this.appName,
-    this.appLink,
+    Key? key,
+    required this.appName,
+    required this.appLink,
   }) : super(key: key);
 
   @override

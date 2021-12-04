@@ -3,14 +3,14 @@ import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
 import 'package:mainul_dev/utils/images.dart';
 import 'package:mainul_dev/utils/strings.dart';
-import 'package:mainul_dev/widgets/responsive_widget.dart';
-import 'package:mainul_dev/views/social_widget.dart';
+import 'package:mainul_dev/common/responsive_widget.dart';
+import 'package:mainul_dev/views/widgets/social_widget.dart';
 
-class ProfileInfo extends StatelessWidget {
+class ProfileInfoWidget extends StatelessWidget {
   final Size screenSize;
-  const ProfileInfo({
-    Key key,
-    @required this.screenSize,
+  const ProfileInfoWidget({
+    Key? key,
+    required this.screenSize,
   }) : super(key: key);
 
   @override

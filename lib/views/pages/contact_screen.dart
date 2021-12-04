@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mainul_dev/common/responsive_widget.dart';
+import 'package:mainul_dev/common/text_form_field.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
 import 'package:mainul_dev/utils/strings.dart';
 import 'package:mainul_dev/viewmodels/contact_viewmodel.dart';
-import 'package:mainul_dev/widgets/responsive_widget.dart';
-import 'package:mainul_dev/widgets/text_form_field.dart';
 
 class ContactScreen extends StatelessWidget {
   final Size screenSize;
-  ContactScreen(Key key, {this.screenSize}) : super(key: key);
+  ContactScreen(Key? key, {required this.screenSize}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    ContactViewModel contactViewModel = Get.put(ContactViewModel());
+    final contactViewModel = Get.put(ContactViewModel());
 
     return ConstrainedBox(
       constraints: BoxConstraints(minHeight: screenSize.height),
@@ -89,7 +89,7 @@ class ContactScreen extends StatelessWidget {
                           ),
                           minLines: 4,
                           maxLines: 5,
-                          maxLength: 100,
+                          maxLength: 300,
                           onChanged: contactViewModel.onMessageChanged,
                         ),
                       ),

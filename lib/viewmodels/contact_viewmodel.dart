@@ -10,13 +10,13 @@ class ContactViewModel extends GetxController {
   RxString fullName = ''.obs;
   RxString email = ''.obs;
   RxString message = ''.obs;
-  RxString errorNameText = RxString(null);
-  RxString errorEmailText = RxString(null);
-  RxString errorMessageText = RxString(null);
+  Rxn errorNameText = Rxn(null);
+  Rxn errorEmailText = Rxn(null);
+  Rxn errorMessageText = Rxn(null);
 
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController messageController = TextEditingController();
+  final TextEditingController nameController = TextEditingController(text: '');
+  final TextEditingController emailController = TextEditingController(text: '');
+  final TextEditingController messageController = TextEditingController(text: '');
 
   @override
   void onInit() {
@@ -58,6 +58,7 @@ class ContactViewModel extends GetxController {
         'name': fullName.value,
         'email': email.value,
         'message': message.value,
+        'created_at': DateTime.now().toString(),
       }).then((value) {
         Get.snackbar('$success', '$successful_msg',
             snackPosition: SnackPosition.BOTTOM,

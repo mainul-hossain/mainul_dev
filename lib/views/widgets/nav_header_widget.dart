@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
 import 'package:mainul_dev/utils/strings.dart';
-import 'package:mainul_dev/widgets/responsive_widget.dart';
+import 'package:mainul_dev/common/responsive_widget.dart';
 
-class NavHeader extends StatelessWidget {
-  final Function onWorksPressed;
-  final Function onResumePressed;
-  final Function onContactPressed;
+class NavHeaderWidget extends StatelessWidget {
+  final Function()? onWorksPressed;
+  final Function()? onResumePressed;
+  final Function()? onContactPressed;
 
-  const NavHeader(Key key, {this.onWorksPressed, this.onResumePressed, this.onContactPressed}) : super(key: key);
+  const NavHeaderWidget(Key? key, {this.onWorksPressed, this.onResumePressed, this.onContactPressed}) : super(key: key);
 
   void handleClick(DrawerMenu value) {
     switch (value) {
       case DrawerMenu.Works:
-        onWorksPressed();
+        onWorksPressed!();
         break;
       case DrawerMenu.Resume:
-        onResumePressed();
+        onResumePressed!();
         break;
       case DrawerMenu.Contact:
-        onContactPressed();
+        onContactPressed!();
         break;
     }
   }

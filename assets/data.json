@@ -1,0 +1,136 @@
+{
+  "profile_name": "Mainul Hossain",
+  "designation": "Mobile Application Developer",
+  "works": [
+    {
+      "company_name": "Atlas Primer ehf.",
+      "position": "Lead Mobile Developer",
+      "duration": "January 2022 - PRESENT"
+    },
+    {
+      "company_name": "MeenaClick (Gemcon Food and Agricultural Products Ltd)",
+      "position": "Mobile Application Developer",
+      "duration": "July 2020 - December 2021"
+    },
+    {
+      "company_name": "Krazy IT",
+      "position": "Android & iOS Developer",
+      "duration": "February 2018 - July 2020"
+    }
+  ],
+  "educations": [
+    {
+      "institution": "Jahangirnagar University",
+      "degree": "M.Sc. in Computer Science",
+      "duration": "2018 - 2019"
+    },
+    {
+      "institution": "Northern University Bangladesh",
+      "degree": "B.Sc. in Computer Science & Engineering",
+      "duration": "2013 - 2017"
+    }
+  ],
+  "skills": {
+    "development_area": "Android | iOS | Flutter",
+    "languages": "Kotlin | Dart | Swift | Java | C# | C++ | C | PHP | JavaScript",
+    "tools": "Xcode | Android Studio | NetBeans | Visual Studio | Trello | Jira | Figma | Git"
+  },
+  "projects": [
+    {
+      "app_name": "Atlas Primer",
+      "app_desc": "Create Your Personal Learning Environment Based on Audio and Conversations",
+      "app_link": "https://play.google.com/store/apps/details?id=com.atlasprimer",
+      "platform": "android"
+    },
+    {
+      "app_name": "Atlas Primer",
+      "app_desc": "Create Your Personal Learning Environment Based on Audio and Conversations",
+      "app_link": "https://apps.apple.com/us/app/atlas-primer/id1561918890",
+      "platform": "ios"
+    },
+    {
+      "app_name": "Meena Bazar Online",
+      "app_desc": "Meena Bazar Online is to save our customers time and effort by providing a thoroughly streamlined digital shopping experience.",
+      "app_link": "https://play.google.com/store/apps/details?id=com.meenabazaronline",
+      "platform": "android"
+    },
+    {
+      "app_name": "Meena Bazar Online",
+      "app_desc": "Meena Bazar Online is to save our customers time and effort by providing a thoroughly streamlined digital shopping experience.",
+      "app_link": "https://apps.apple.com/app/meena-bazar-online/id6451228785",
+      "platform": "ios"
+    },
+    {
+      "app_name": "MeenaClick",
+      "app_desc": "MeenaClick is a cornerstone of Bangladesh’s thriving e-commerce sector, building upon the capabilities and reputation of Meena Bazar, one of the largest retail chains in the country.",
+      "app_link": "https://play.google.com/store/apps/details?id=com.meenaclick.customer",
+      "platform": "android"
+    },
+    {
+      "app_name": "MeenaClick",
+      "app_desc": "MeenaClick is a cornerstone of Bangladesh’s thriving e-commerce sector, building upon the capabilities and reputation of Meena Bazar, one of the largest retail chains in the country.",
+      "app_link": "https://apps.apple.com/us/app/meenaclick/id1541513673",
+      "platform": "ios"
+    },
+    {
+      "app_name": "Meena Wholesale",
+      "app_desc": "Meena Wholesale is a B2B marketplace, where Retail business owners can purchase products at wholesale rates.",
+      "app_link": "https://play.google.com/store/apps/details?id=com.meenaclick.wholesale",
+      "platform": "android"
+    },
+    {
+      "app_name": "Meena Wholesale",
+      "app_desc": "Meena Wholesale is a B2B marketplace, where Retail business owners can purchase products at wholesale rates.",
+      "app_link": "https://apps.apple.com/us/app/meena-wholesale/id1595539663",
+      "platform": "ios"
+    },
+    {
+      "app_name": "Port - Remote Travel",
+      "app_desc": "Port lets you roam the world from home.",
+      "app_link": "https://play.google.com/store/apps/details?id=com.theportapp.remotetravel",
+      "platform": "android"
+    },
+    {
+      "app_name": "DROSUAE",
+      "app_desc": "DROSUAE contains thousands of syllables, scientific lessons, speeches and lectures for the finest of the great sheikhs in the United Arab Emirates.",
+      "app_link": "https://play.google.com/store/apps/details?id=ae.drosuae.mobileapp",
+      "platform": "android"
+    },
+    {
+      "app_name": "Krazy Bazaar",
+      "app_desc": "Krazy Bazaar - Australia's largest sub-continental marketplace.",
+      "app_link": "https://play.google.com/store/apps/details?id=com.krazyit.krazybazaar",
+      "platform": "android"
+    },
+    {
+      "app_name": "Krazy Bazaar",
+      "app_desc": "Krazy Bazaar - Australia's largest sub-continental marketplace.",
+      "app_link": "https://apps.apple.com/sg/app/krazy-bazaar/id1502917996",
+      "platform": "ios"
+    },
+    {
+      "app_name": "Krazy Bazaar Vendor",
+      "app_desc": "Krazy Bazaar - Australia's largest sub-continental marketplace.",
+      "app_link": "https://play.google.com/store/apps/details?id=com.krazyit.krazybazaarvendor",
+      "platform": "android"
+    },
+    {
+      "app_name": "Krazy Bazaar POS",
+      "app_desc": "Krazy Bazaar - Australia's largest sub-continental marketplace.",
+      "app_link": "https://play.google.com/store/apps/details?id=com.krazyit.krazybazaarpos",
+      "platform": "android"
+    },
+    {
+      "app_name": "Krazy Tickets",
+      "app_desc": "Krazy Tickets is an event's ticketing platform and it, helps hosts to sell tickets of any types of events.",
+      "app_link": "https://play.google.com/store/apps/details?id=com.krazyit.krazytickets",
+      "platform": "android"
+    },
+    {
+      "app_name": "Grade - Restaurant",
+      "app_desc": "Grade référence les lieux dans lesquels on peut se restaurer (fast food, restaurant , salon de the etc ...)",
+      "app_link": "https://play.google.com/store/apps/details?id=fr.grade.grade&hl=fr",
+      "platform": "android"
+    }
+  ]
+}

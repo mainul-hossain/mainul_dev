@@ -7,14 +7,27 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/strings.dart';
-import 'package:mainul_dev/views/home_screen.dart';
+import 'package:mainul_dev/views/pages/home_screen.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 bool USE_FIRESTORE_EMULATOR = false;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  try {
+    await Firebase.initializeApp(
+      options: const FirebaseOptions(
+        apiKey: 'AIzaSyCB8UYRpGMcmQn6_OpH3oNx83U6EqmTbkU',
+        appId: '1:68320151825:web:103ff2c3d37a82ae44a4b0',
+        messagingSenderId: '68320151825',
+        projectId: 'mainul-dev',
+      ),
+    );
+  } on FirebaseException catch (e) {
+    if (e.code == 'duplicate-app') {
+      await Firebase.initializeApp();
+    }
+  }
 
   // Switch host based on platform.
   String host = 'localhost:8080';

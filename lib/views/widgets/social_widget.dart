@@ -6,7 +6,7 @@ import 'package:mainul_dev/utils/images.dart';
 
 class SocialWidget extends StatelessWidget {
   const SocialWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

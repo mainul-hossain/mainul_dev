@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mainul_dev/common/responsive_widget.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
 import 'package:mainul_dev/viewmodels/home_viewmodel.dart';
-import 'package:mainul_dev/views/contact_screen.dart';
-import 'package:mainul_dev/views/nav_header.dart';
-import 'package:mainul_dev/views/profile_info.dart';
-import 'package:mainul_dev/views/resume_screen.dart';
-import 'package:mainul_dev/views/works_screen.dart';
-import 'package:mainul_dev/widgets/responsive_widget.dart';
+import 'package:mainul_dev/views/pages/contact_screen.dart';
+import 'package:mainul_dev/views/pages/works_screen.dart';
+import 'package:mainul_dev/views/widgets/nav_header_widget.dart';
+import 'package:mainul_dev/views/widgets/profile_info_widget.dart';
+import 'package:mainul_dev/views/pages/resume_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final homeViewModel = Get.put(HomeViewModel());
@@ -207,7 +207,7 @@ class HomeScreen extends StatelessWidget {
             mini: true,
             elevation: 8,
             onPressed: () {
-              homeViewModel.scrollController?.animateTo(0, duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
+              homeViewModel.scrollController.animateTo(0, duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
             },
           ),
         ),
@@ -222,18 +222,18 @@ class HomeScreen extends StatelessWidget {
                   constraints: BoxConstraints(minHeight: screenSize.height),
                   child: Column(
                     children: [
-                      NavHeader(
+                      NavHeaderWidget(
                         key,
                         onWorksPressed: () {
-                          Scrollable.ensureVisible(worksKey.currentContext,
+                          Scrollable.ensureVisible(worksKey.currentContext!,
                               duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
                         },
                         onResumePressed: () {
-                          Scrollable.ensureVisible(resumeKey.currentContext,
+                          Scrollable.ensureVisible(resumeKey.currentContext!,
                               duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
                         },
                         onContactPressed: () {
-                          Scrollable.ensureVisible(contactKey.currentContext,
+                          Scrollable.ensureVisible(contactKey.currentContext!,
                               duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
                         },
                       ),
@@ -243,7 +243,7 @@ class HomeScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          ProfileInfo(screenSize: screenSize),
+                          ProfileInfoWidget(screenSize: screenSize),
                         ],
                       ),
                     ],
@@ -260,6 +260,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      mediumScreen: const SizedBox.shrink(),
     );
   }
 }
