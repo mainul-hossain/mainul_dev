@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'dart:math' as math;
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
+import 'package:mainul_dev/utils/strings.dart';
 import 'package:mainul_dev/widgets/app_link_widget.dart';
 import 'package:mainul_dev/widgets/responsive_widget.dart';
 
@@ -16,9 +16,7 @@ class WorksScreen extends StatelessWidget {
       constraints: BoxConstraints(minHeight: screenSize.height),
       child: Row(
         children: [
-          Expanded(
-              flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2,
-              child: Container()),
+          Expanded(flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2, child: Container()),
           Expanded(
             flex: 6,
             child: Column(
@@ -27,7 +25,7 @@ class WorksScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: defaultPadding * 2.5),
                   child: Text(
-                    'Works',
+                    '$works',
                     textAlign: TextAlign.start,
                     textScaleFactor: 2,
                     style: TextStyle(
@@ -63,9 +61,7 @@ class WorksScreen extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-              flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2,
-              child: Container()),
+          Expanded(flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2, child: Container()),
         ],
       ),
     );
@@ -76,7 +72,7 @@ class WorksScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Android',
+          '$android',
           textAlign: TextAlign.start,
           textScaleFactor: 1.5,
           style: TextStyle(
@@ -86,12 +82,25 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2),
         AppLinkWidget(
-          appName: 'MeenaClick',
+          appName: '$atlas_primer',
+          appLink: atlasPrimerAndroid,
+        ),
+        SizedBox(height: defaultPadding),
+        Text(
+          '$atlas_primer_desc',
+          textAlign: TextAlign.start,
+          style: TextStyle(
+            color: colorWhite,
+          ),
+        ),
+        SizedBox(height: defaultPadding * 2.5),
+        AppLinkWidget(
+          appName: '$meena_click',
           appLink: meenaClickAndroid,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'MeenaClick is a cornerstone of Bangladesh’s thriving e-commerce sector, building upon the capabilities and reputation of Meena Bazar, one of the largest retail chains in the country.',
+          '$meena_click_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -99,12 +108,38 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         AppLinkWidget(
-          appName: 'Port - Remote Travel',
+          appName: '$meena_wholesale',
+          appLink: meenaWholesaleAndroid,
+        ),
+        SizedBox(height: defaultPadding),
+        Text(
+          '$meena_wholesale_desc',
+          textAlign: TextAlign.start,
+          style: TextStyle(
+            color: colorWhite,
+          ),
+        ),
+        SizedBox(height: defaultPadding * 2.5),
+        AppLinkWidget(
+          appName: '$mc_rider',
+          appLink: meenaClickAndroid,
+        ),
+        SizedBox(height: defaultPadding),
+        Text(
+          '$mc_rider_desc',
+          textAlign: TextAlign.start,
+          style: TextStyle(
+            color: colorWhite,
+          ),
+        ),
+        SizedBox(height: defaultPadding * 2.5),
+        AppLinkWidget(
+          appName: '$port',
           appLink: portApp,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Port lets you roam the world from home.',
+          '$port_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -112,12 +147,12 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         AppLinkWidget(
-          appName: 'DROSUAE',
+          appName: '$dros_uae',
           appLink: drosUAE,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'DROSUAE contains thousands of syllables, scientific lessons, speeches and lectures for the finest of the great sheikhs in the United Arab Emirates',
+          '$dros_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -125,12 +160,12 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         AppLinkWidget(
-          appName: 'Krazy Bazaar',
+          appName: '$krazy_bazaar',
           appLink: krazyBazaarAndroid,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Krazy Bazaar - Australia\'s largest sub-continental marketplace.',
+          '$krazy_bazaar_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -138,12 +173,12 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         AppLinkWidget(
-          appName: 'Krazy Bazaar Vendor',
+          appName: '$kb_vendor',
           appLink: krazyBazaarVendor,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Krazy Bazaar - Australia\'s largest sub-continental marketplace.',
+          '$kb_vendor_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -151,12 +186,12 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         AppLinkWidget(
-          appName: 'Krazy Bazaar POS',
+          appName: '$kb_pos',
           appLink: krazyBazaarPOS,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Krazy Bazaar - Australia\'s largest sub-continental marketplace.',
+          '$kb_pos_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -164,12 +199,12 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         AppLinkWidget(
-          appName: 'Krazy Tickets',
+          appName: '$krazy_tickets',
           appLink: krazyTicket,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Krazy Tickets is an event\'s ticketing platform and it, helps hosts to sell tickets of any types of events.',
+          '$krazy_tickets_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -177,12 +212,12 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         AppLinkWidget(
-          appName: 'Grade - Restaurant',
+          appName: '$grade',
           appLink: gradeAndroid,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Grade référence les lieux dans lesquels on peut se restaurer (fast food, restaurant , salon de the etc ...)',
+          '$grade_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -197,7 +232,7 @@ class WorksScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'iOS',
+          '$ios',
           textAlign: TextAlign.center,
           textScaleFactor: 1.5,
           style: TextStyle(
@@ -207,12 +242,12 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2),
         AppLinkWidget(
-          appName: 'MeenaClick',
-          appLink: meenaClickIOS,
+          appName: '$atlas_primer',
+          appLink: atlasPrimerIOS,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'MeenaClick is a cornerstone of Bangladesh’s thriving e-commerce sector, building upon the capabilities and reputation of Meena Bazar, one of the largest retail chains in the country.',
+          '$atlas_primer_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -220,12 +255,38 @@ class WorksScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         AppLinkWidget(
-          appName: 'Krazy Bazaar',
+          appName: '$meena_click',
+          appLink: meenaClickIOS,
+        ),
+        SizedBox(height: defaultPadding),
+        Text(
+          '$meena_click_desc',
+          textAlign: TextAlign.start,
+          style: TextStyle(
+            color: colorWhite,
+          ),
+        ),
+        SizedBox(height: defaultPadding * 2.5),
+        AppLinkWidget(
+          appName: '$meena_wholesale',
+          appLink: meenaWholesaleIOS,
+        ),
+        SizedBox(height: defaultPadding),
+        Text(
+          '$meena_wholesale_desc',
+          textAlign: TextAlign.start,
+          style: TextStyle(
+            color: colorWhite,
+          ),
+        ),
+        SizedBox(height: defaultPadding * 2.5),
+        AppLinkWidget(
+          appName: '$krazy_bazaar',
           appLink: krazyBazaarIOS,
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Krazy Bazaar - Australia\'s largest sub-continental marketplace.',
+          '$krazy_bazaar_desc',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,

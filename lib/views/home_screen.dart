@@ -207,8 +207,7 @@ class HomeScreen extends StatelessWidget {
             mini: true,
             elevation: 8,
             onPressed: () {
-              homeViewModel.scrollController?.animateTo(0,
-                  duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
+              homeViewModel.scrollController?.animateTo(0, duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
             },
           ),
         ),
@@ -216,8 +215,7 @@ class HomeScreen extends StatelessWidget {
           controller: homeViewModel.scrollController,
           child: AnimatedPadding(
             duration: Duration(seconds: 1),
-            padding: EdgeInsets.symmetric(
-                horizontal: defaultPadding * 3, vertical: defaultPadding * 2.5),
+            padding: EdgeInsets.symmetric(horizontal: defaultPadding * 3, vertical: defaultPadding * 2.5),
             child: Column(
               children: [
                 ConstrainedBox(
@@ -228,18 +226,15 @@ class HomeScreen extends StatelessWidget {
                         key,
                         onWorksPressed: () {
                           Scrollable.ensureVisible(worksKey.currentContext,
-                              duration: Duration(seconds: 1),
-                              curve: Curves.fastOutSlowIn);
+                              duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
                         },
                         onResumePressed: () {
                           Scrollable.ensureVisible(resumeKey.currentContext,
-                              duration: Duration(seconds: 1),
-                              curve: Curves.fastOutSlowIn);
+                              duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
                         },
                         onContactPressed: () {
                           Scrollable.ensureVisible(contactKey.currentContext,
-                              duration: Duration(seconds: 1),
-                              curve: Curves.fastOutSlowIn);
+                              duration: Duration(seconds: 1), curve: Curves.fastOutSlowIn);
                         },
                       ),
                       SizedBox(height: defaultPadding * 2.5),

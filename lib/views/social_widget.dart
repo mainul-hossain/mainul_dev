@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
+import 'package:mainul_dev/utils/images.dart';
 
 class SocialWidget extends StatelessWidget {
   const SocialWidget({
@@ -14,12 +15,13 @@ class SocialWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25), color: linkedInColor),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(25), color: linkedInColor),
           child: IconButton(
             icon: SvgPicture.asset(
-              'assets/icons/linkedin.svg',
+              '$ic_linked_in',
               color: colorWhite,
+              width: 48,
+              height: 48,
             ),
             onPressed: () {
               launchUrl(linkedInUrl);
@@ -28,12 +30,13 @@ class SocialWidget extends StatelessWidget {
         ),
         SizedBox(width: defaultPadding),
         Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25), color: colorWhite),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(25), color: colorWhite),
           child: IconButton(
             icon: SvgPicture.asset(
-              'assets/icons/github.svg',
+              '$ic_github',
               color: colorBlack,
+              width: 48,
+              height: 48,
             ),
             onPressed: () {
               launchUrl(githubUrl);
@@ -42,12 +45,13 @@ class SocialWidget extends StatelessWidget {
         ),
         SizedBox(width: defaultPadding),
         Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25), color: facebookColor),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(25), color: facebookColor),
           child: IconButton(
             icon: SvgPicture.asset(
-              'assets/icons/facebook.svg',
+              '$ic_facebook',
               color: colorWhite,
+              width: 48,
+              height: 48,
             ),
             onPressed: () {
               launchUrl(facebookUrl);
@@ -56,12 +60,13 @@ class SocialWidget extends StatelessWidget {
         ),
         SizedBox(width: defaultPadding),
         Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25), color: twitterColor),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(25), color: twitterColor),
           child: IconButton(
             icon: SvgPicture.asset(
-              'assets/icons/twitter.svg',
+              '$ic_twitter',
               color: colorWhite,
+              width: 48,
+              height: 48,
             ),
             onPressed: () {
               launchUrl(twitterUrl);
@@ -70,12 +75,13 @@ class SocialWidget extends StatelessWidget {
         ),
         SizedBox(width: defaultPadding),
         Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25), color: instagramColor),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(25), color: instagramColor),
           child: IconButton(
             icon: SvgPicture.asset(
-              'assets/icons/instagram.svg',
+              '$ic_instagram',
               color: colorWhite,
+              width: 48,
+              height: 48,
             ),
             onPressed: () {
               launchUrl(instagramUrl);

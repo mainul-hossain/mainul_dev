@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
+import 'package:mainul_dev/utils/images.dart';
+import 'package:mainul_dev/utils/strings.dart';
 import 'package:mainul_dev/widgets/responsive_widget.dart';
 import 'package:mainul_dev/views/social_widget.dart';
 
@@ -19,18 +21,14 @@ class ProfileInfo extends StatelessWidget {
         SizedBox(height: defaultPadding),
         AnimatedContainer(
           duration: Duration(seconds: 1),
-          width: ResponsiveWidget.isSmallScreen(context)
-              ? screenSize.height * 0.25
-              : screenSize.width * 0.25,
-          height: ResponsiveWidget.isSmallScreen(context)
-              ? screenSize.height * 0.25
-              : screenSize.width * 0.25,
+          width: ResponsiveWidget.isSmallScreen(context) ? screenSize.height * 0.25 : screenSize.width * 0.25,
+          height: ResponsiveWidget.isSmallScreen(context) ? screenSize.height * 0.25 : screenSize.width * 0.25,
           decoration: BoxDecoration(
             backgroundBlendMode: BlendMode.luminosity,
             color: colorScaffoldDark,
             shape: BoxShape.circle,
             image: DecorationImage(
-              image: AssetImage('assets/images/profile_image.webp'),
+              image: AssetImage('$profile_img'),
               alignment: Alignment.center,
               fit: BoxFit.cover,
             ),
@@ -38,7 +36,7 @@ class ProfileInfo extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2),
         Text(
-          'Mainul Hossain',
+          '$profile_name',
           textAlign: TextAlign.center,
           textScaleFactor: 2,
           style: TextStyle(
@@ -48,7 +46,7 @@ class ProfileInfo extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Mobile Application Developer',
+          '$profile_title',
           textAlign: TextAlign.center,
           textScaleFactor: 2.5,
           style: TextStyle(

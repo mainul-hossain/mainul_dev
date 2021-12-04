@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
+import 'package:mainul_dev/utils/strings.dart';
 import 'package:mainul_dev/viewmodels/contact_viewmodel.dart';
 import 'package:mainul_dev/widgets/responsive_widget.dart';
 import 'package:mainul_dev/widgets/text_form_field.dart';
@@ -18,9 +19,7 @@ class ContactScreen extends StatelessWidget {
       constraints: BoxConstraints(minHeight: screenSize.height),
       child: Row(
         children: [
-          Expanded(
-              flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2,
-              child: Container()),
+          Expanded(flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2, child: Container()),
           Expanded(
             flex: 6,
             child: Row(
@@ -32,10 +31,9 @@ class ContactScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding:
-                            const EdgeInsets.only(top: defaultPadding * 2.5),
+                        padding: const EdgeInsets.only(top: defaultPadding * 2.5),
                         child: Text(
-                          'Contact',
+                          '$contact',
                           textAlign: TextAlign.start,
                           textScaleFactor: 2,
                           style: TextStyle(
@@ -48,7 +46,7 @@ class ContactScreen extends StatelessWidget {
                       Obx(
                         () => EditText(
                           controller: contactViewModel.nameController,
-                          labelText: 'Full Name',
+                          labelText: '$full_name',
                           type: TextInputType.name,
                           obscureText: false,
                           onChanged: contactViewModel.onFullNameChanged,
@@ -60,7 +58,7 @@ class ContactScreen extends StatelessWidget {
                       Obx(
                         () => EditText(
                           controller: contactViewModel.emailController,
-                          labelText: 'Email',
+                          labelText: '$email_label',
                           type: TextInputType.text,
                           obscureText: false,
                           onChanged: contactViewModel.onEmailChanged,
@@ -75,29 +73,18 @@ class ContactScreen extends StatelessWidget {
                           autofocus: false,
                           style: TextStyle(color: colorWhite),
                           decoration: InputDecoration(
-                            contentPadding: EdgeInsets.symmetric(
-                                vertical: defaultPadding,
-                                horizontal: defaultPadding),
+                            contentPadding: EdgeInsets.symmetric(vertical: defaultPadding, horizontal: defaultPadding),
                             focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(defaultBorderRadius)),
-                              borderSide: BorderSide(
-                                  width: defaultBorderWidth,
-                                  color: accentColor),
+                              borderRadius: BorderRadius.all(Radius.circular(defaultBorderRadius)),
+                              borderSide: BorderSide(width: defaultBorderWidth, color: accentColor),
                             ),
                             enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                  Radius.circular(defaultBorderRadius)),
-                              borderSide: BorderSide(
-                                  width: defaultBorderWidth,
-                                  color: colorGrey.withOpacity(0.4)),
+                              borderRadius: BorderRadius.all(Radius.circular(defaultBorderRadius)),
+                              borderSide: BorderSide(width: defaultBorderWidth, color: colorGrey.withOpacity(0.4)),
                             ),
-                            hintText: 'Write Something...',
-                            hintStyle: TextStyle(
-                                fontSize: fontSizeNormal,
-                                color: textColorDark.withOpacity(0.8)),
-                            counterStyle: TextStyle(
-                                color: colorLightGrey.withOpacity(0.4)),
+                            hintText: '$write_something',
+                            hintStyle: TextStyle(fontSize: fontSizeNormal, color: textColorDark.withOpacity(0.8)),
+                            counterStyle: TextStyle(color: colorLightGrey.withOpacity(0.4)),
                             errorText: contactViewModel.errorMessageText.value,
                           ),
                           minLines: 4,
@@ -109,16 +96,14 @@ class ContactScreen extends StatelessWidget {
                       SizedBox(height: defaultPadding),
                       ElevatedButton(
                         onPressed: () async {
-                          var response =
-                              await contactViewModel.onSubmitMessage();
+                          var response = await contactViewModel.onSubmitMessage();
                           if (response) {}
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: defaultPadding * 2,
-                              vertical: defaultPadding * 0.8),
+                              horizontal: defaultPadding * 2, vertical: defaultPadding * 0.8),
                           child: Text(
-                            'Submit',
+                            '$submit',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: colorLightGrey,
@@ -129,15 +114,11 @@ class ContactScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                ResponsiveWidget.isSmallScreen(context)
-                    ? SizedBox()
-                    : Expanded(child: Container()),
+                ResponsiveWidget.isSmallScreen(context) ? SizedBox() : Expanded(child: Container()),
               ],
             ),
           ),
-          Expanded(
-              flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2,
-              child: Container()),
+          Expanded(flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2, child: Container()),
         ],
       ),
     );

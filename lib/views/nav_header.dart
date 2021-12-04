@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
+import 'package:mainul_dev/utils/strings.dart';
 import 'package:mainul_dev/widgets/responsive_widget.dart';
 
 class NavHeader extends StatelessWidget {
@@ -8,9 +9,7 @@ class NavHeader extends StatelessWidget {
   final Function onResumePressed;
   final Function onContactPressed;
 
-  const NavHeader(Key key,
-      {this.onWorksPressed, this.onResumePressed, this.onContactPressed})
-      : super(key: key);
+  const NavHeader(Key key, {this.onWorksPressed, this.onResumePressed, this.onContactPressed}) : super(key: key);
 
   void handleClick(DrawerMenu value) {
     switch (value) {
@@ -46,10 +45,7 @@ class NavHeader extends StatelessWidget {
         SizedBox(width: defaultPadding),
         SelectableText(
           email,
-          style: TextStyle(
-              fontWeight: FontWeight.normal,
-              color: colorWhite,
-              fontSize: fontSizeMedium),
+          style: TextStyle(fontWeight: FontWeight.normal, color: colorWhite, fontSize: fontSizeMedium),
         ),
         Flexible(
           child: ResponsiveWidget.isLargeScreen(context)
@@ -59,10 +55,9 @@ class NavHeader extends StatelessWidget {
                     TextButton(
                       onPressed: onResumePressed,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: defaultPadding),
+                        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
                         child: Text(
-                          'Resume',
+                          '$resume',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: colorLightGrey,
@@ -74,10 +69,9 @@ class NavHeader extends StatelessWidget {
                     TextButton(
                       onPressed: onWorksPressed,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: defaultPadding),
+                        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
                         child: Text(
-                          'Works',
+                          '$works',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: colorLightGrey,
@@ -89,10 +83,9 @@ class NavHeader extends StatelessWidget {
                     TextButton(
                       onPressed: onContactPressed,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: defaultPadding),
+                        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
                         child: Text(
-                          'Contact',
+                          '$contact',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: colorLightGrey,
@@ -113,11 +106,7 @@ class NavHeader extends StatelessWidget {
                       color: colorCardDark,
                       onSelected: handleClick,
                       itemBuilder: (BuildContext context) {
-                        return {
-                          DrawerMenu.Resume,
-                          DrawerMenu.Works,
-                          DrawerMenu.Contact
-                        }.map((DrawerMenu choice) {
+                        return {DrawerMenu.Resume, DrawerMenu.Works, DrawerMenu.Contact}.map((DrawerMenu choice) {
                           return PopupMenuItem<DrawerMenu>(
                             value: choice,
                             child: Text(

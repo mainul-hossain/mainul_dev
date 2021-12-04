@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mainul_dev/utils/colors.dart';
 import 'package:mainul_dev/utils/constants.dart';
+import 'package:mainul_dev/utils/strings.dart';
 import 'package:mainul_dev/widgets/responsive_widget.dart';
 
 class ResumeScreen extends StatelessWidget {
@@ -13,9 +14,7 @@ class ResumeScreen extends StatelessWidget {
       constraints: BoxConstraints(minHeight: screenSize.height),
       child: Row(
         children: [
-          Expanded(
-              flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2,
-              child: Container()),
+          Expanded(flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2, child: Container()),
           Expanded(
             flex: 6,
             child: Column(
@@ -24,7 +23,7 @@ class ResumeScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: defaultPadding * 2.5),
                   child: Text(
-                    'Resume',
+                    '$resume',
                     textAlign: TextAlign.center,
                     textScaleFactor: 2,
                     style: TextStyle(
@@ -69,9 +68,7 @@ class ResumeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-              flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2,
-              child: Container()),
+          Expanded(flex: ResponsiveWidget.isSmallScreen(context) ? 0 : 2, child: Container()),
         ],
       ),
     );
@@ -82,7 +79,7 @@ class ResumeScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Work Experience',
+          '$work_experience',
           textAlign: TextAlign.start,
           textScaleFactor: 1.5,
           style: TextStyle(
@@ -92,7 +89,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2),
         Text(
-          'MeenaClick (Gemcon Food and Agricultural Products Ltd)',
+          '$com_meena_click',
           textAlign: TextAlign.start,
           textScaleFactor: 1.2,
           style: TextStyle(
@@ -102,7 +99,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Mobile Application Developer',
+          '$meena_click_position',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -110,7 +107,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 0.5),
         Text(
-          'July 2020 - Current',
+          '$meena_click_duration',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: lightTextColor,
@@ -118,7 +115,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         Text(
-          'Krazy IT',
+          '$com_kray_it',
           textAlign: TextAlign.start,
           textScaleFactor: 1.2,
           style: TextStyle(
@@ -128,7 +125,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Android & iOS Developer',
+          '$krazy_it_position',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -136,7 +133,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 0.5),
         Text(
-          'February 2018 - July 2020',
+          '$krazy_it_duration',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: lightTextColor,
@@ -151,7 +148,7 @@ class ResumeScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Education',
+          '$education',
           textAlign: TextAlign.start,
           textScaleFactor: 1.5,
           style: TextStyle(
@@ -161,7 +158,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2),
         Text(
-          'Jahangirnagar University',
+          '$ms_institution',
           textAlign: TextAlign.start,
           textScaleFactor: 1.2,
           style: TextStyle(
@@ -171,7 +168,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'MSc • Computer Science',
+          '$ms_major',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -179,7 +176,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 0.5),
         Text(
-          '2018 - 2019',
+          '$ms_duration',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: lightTextColor,
@@ -187,7 +184,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         Text(
-          'Northern University Bangladesh',
+          '$bs_institution',
           textAlign: TextAlign.start,
           textScaleFactor: 1.2,
           style: TextStyle(
@@ -197,7 +194,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'BSc • Computer Science & Engineering',
+          '$bs_major',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -205,7 +202,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 0.5),
         Text(
-          '2013 - 2016',
+          '$bs_duration',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: lightTextColor,
@@ -220,7 +217,7 @@ class ResumeScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Skills',
+          '$skills',
           textAlign: TextAlign.start,
           textScaleFactor: 1.5,
           style: TextStyle(
@@ -230,7 +227,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2),
         Text(
-          'Development',
+          '$development',
           textAlign: TextAlign.start,
           textScaleFactor: 1.2,
           style: TextStyle(
@@ -240,7 +237,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Android, iOS & Flutter',
+          '$development_area',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -248,7 +245,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         Text(
-          'Programming Languages',
+          '$programming_languages',
           textAlign: TextAlign.start,
           textScaleFactor: 1.2,
           style: TextStyle(
@@ -258,7 +255,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Java, Kotlin, Swift, Dart, C#, C++, C, PHP, JavaScript',
+          '$languages_name',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,
@@ -266,7 +263,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding * 2.5),
         Text(
-          'Tools',
+          '$tools',
           textAlign: TextAlign.start,
           textScaleFactor: 1.2,
           style: TextStyle(
@@ -276,7 +273,7 @@ class ResumeScreen extends StatelessWidget {
         ),
         SizedBox(height: defaultPadding),
         Text(
-          'Xcode, Android Studio, NetBeans, Visual Studio, Eclipse IDE, Trello, Jira, Slack, Git',
+          '$tools_name',
           textAlign: TextAlign.start,
           style: TextStyle(
             color: colorWhite,

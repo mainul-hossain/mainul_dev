@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mainul_dev/utils/colors.dart';
+import 'package:mainul_dev/utils/strings.dart';
 
 class ContactViewModel extends GetxController {
   final firestoreInstance = FirebaseFirestore.instance;
@@ -37,15 +38,15 @@ class ContactViewModel extends GetxController {
   bool validations() {
     bool isValid = true;
     if (fullName.value.trim().isEmpty) {
-      errorNameText.value = 'Enter Your Full Name';
+      errorNameText.value = '$enter_name_label';
       isValid = false;
     }
     if (email.value.trim().isEmpty) {
-      errorEmailText.value = 'Enter Your Email';
+      errorEmailText.value = '$enter_email_label';
       isValid = false;
     }
     if (message.value.trim().isEmpty) {
-      errorMessageText.value = 'Write Your Message';
+      errorMessageText.value = '$write_msg';
       isValid = false;
     }
     return isValid;
@@ -58,7 +59,7 @@ class ContactViewModel extends GetxController {
         'email': email.value,
         'message': message.value,
       }).then((value) {
-        Get.snackbar('Success!', 'Thanks for submitting your response',
+        Get.snackbar('$success', '$successful_msg',
             snackPosition: SnackPosition.BOTTOM,
             backgroundColor: colorGreen,
             duration: Duration(milliseconds: 900),
